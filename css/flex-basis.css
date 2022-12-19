@@ -7,11 +7,10 @@ body {
 }
 
 .container {
+  display: flex;
+  width: 1010px;
   border: 5px solid red;
   background-color: silver;
-  display: flex;
-  flex-flow: row nowrap;
-  width: 1010px;
 }
 
 [class*="group"] {
@@ -19,14 +18,16 @@ body {
 }
 
 .group1 {
+  width: 500px; /* width 와 basis 두 속성이 적용되면 basis가 우선이다 (width 적용안됨) */
+  flex: 1 1 200px; /* 순서 grow, shrink, basis */
   background-color: gold;
-  flex: 1 1 500px;
 }
 .group2 {
+  flex: 2 1 200px;
   background-color: aqua;
-  flex: 1 2 1200px;
 }
 .group3 {
+  flex: 2 1 200px;
   background-color: lightgreen;
-  flex: 1 1 300px;
+  order: -1;
 }
