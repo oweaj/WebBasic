@@ -1,0 +1,9 @@
+body {
+  background: pink;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  background: tomato url("/images/desk.jpg") no-repeat center / contain;
+}
